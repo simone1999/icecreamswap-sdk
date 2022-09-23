@@ -14,12 +14,7 @@ export class Currency {
   public readonly name?: string
 
   /**
-   * The only instance of the base class `Currency`.
-   */
-  public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
-
-  /**
-   * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
+   * Constructs an instance of the base class `Currency`. There is no instance of the base class 'Currency'
    * @param decimals decimals of the currency
    * @param symbol symbol of the currency
    * @param name of the currency
@@ -33,5 +28,20 @@ export class Currency {
   }
 }
 
-const ETHER = Currency.ETHER
+export class nativeCurrency extends Currency {
+  public symbol?: string
+  public name?: string
+
+  public changeNameAndSymbol(newName: string, newSymbol: string) {
+    this.name = newName;
+    this.symbol = newSymbol;
+  }
+
+  /**
+   * The only instance of the base class `nativeCurrency`.
+   */
+  public static readonly ETHER: nativeCurrency = new nativeCurrency(18, 'ETH', 'Ether')
+}
+
+const ETHER = nativeCurrency.ETHER
 export { ETHER }
