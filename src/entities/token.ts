@@ -105,5 +105,12 @@ export const WETH = {
     18,
     'WDOGE',
     'Wrapped Doge'
+  ),
+  [ChainId.DOKEN]: new Token(
+      ChainId.DOKEN,
+      '0x27b45bCC26e01Ed50B4080A405D1c492FEe89d63',
+      18,
+      'WDKN',
+      'Wrapped DoKEN'
   )
 }
