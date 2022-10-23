@@ -112,5 +112,12 @@ export const WETH = {
       18,
       'WDKN',
       'Wrapped DoKEN'
+  ),
+  [ChainId.FUSE]: new Token(
+      ChainId.FUSE,
+      '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629',
+      18,
+      'WFUSE',
+      'Wrapped Fuse'
   )
 }
