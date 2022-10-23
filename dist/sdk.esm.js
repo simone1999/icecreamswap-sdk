@@ -24,6 +24,7 @@ var ChainId;
   ChainId[ChainId["BITGERT"] = 32520] = "BITGERT";
   ChainId[ChainId["DOGE"] = 2000] = "DOGE";
   ChainId[ChainId["DOKEN"] = 61916] = "DOKEN";
+  ChainId[ChainId["FUSE"] = 122] = "FUSE";
 })(ChainId || (ChainId = {}));
 
 var TradeType;

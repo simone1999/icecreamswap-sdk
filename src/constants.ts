@@ -12,6 +12,7 @@ export enum ChainId {
   BITGERT = 32520,
   DOGE = 2000,
   DOKEN = 61916,
+  FUSE = 122,
 }
 
 export enum TradeType {

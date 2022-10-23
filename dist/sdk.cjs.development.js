@@ -28,6 +28,7 @@ var _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["BITGERT"] = 32520] = "BITGERT";
   ChainId[ChainId["DOGE"] = 2000] = "DOGE";
   ChainId[ChainId["DOKEN"] = 61916] = "DOKEN";
+  ChainId[ChainId["FUSE"] = 122] = "FUSE";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
