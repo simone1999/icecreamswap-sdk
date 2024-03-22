@@ -13,6 +13,7 @@ export enum ChainId {
   DOGE = 2000,
   DOKEN = 61916,
   FUSE = 122,
+  QUAI_TESTNET = 9000,
 }
 
 export enum TradeType {
@@ -26,9 +27,9 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x9E6d21E759A7A288b80eef94E4737D313D31c13f'
+export const FACTORY_ADDRESS = '0x00aCC7CaD9D2bF582463430D3d444B0a1169B76c'
 
-export const INIT_CODE_HASH = '0x58c1b429d0ffdb4407396ae8118c58fed54898473076d0394163ea2198f7c4a3'
+export const INIT_CODE_HASH = '0x81ec0781cbaa4a7424c176f40e3e93847bebd5dfa91542b31cb562d2ccbd44cd'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

@@ -119,5 +119,12 @@ export const WETH = {
       18,
       'WFUSE',
       'Wrapped Fuse'
+  ),
+  [ChainId.QUAI_TESTNET]: new Token(
+    ChainId.QUAI_TESTNET,
+    '0x00df9040B44Cd04e137562F8aeFc9e218A1bC42D',
+    18,
+    'WQUAI',
+    'Wrapped Quai'
   )
 }
