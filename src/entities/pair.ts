@@ -21,6 +21,24 @@ import { sqrt, parseBigintIsh } from '../utils'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 import { Token } from './token'
 
+const grindPairAddress = (token0Address: string, token1Address: string): string => {
+  let i = 0;
+  while (true) {
+    const resultingAddress = getCreate2Address(
+      FACTORY_ADDRESS,
+      keccak256(['bytes'], [pack(['bytes', 'uint256'], [
+        pack(['address', 'address'], [token0Address, token1Address]),
+        i
+      ])]),
+      INIT_CODE_HASH
+    )
+    if (resultingAddress.startsWith("0x00")) {
+      return resultingAddress
+    }
+    i++;
+  }
+}
+
 let PAIR_ADDRESS_CACHE: { [token0Address: string]: { [token1Address: string]: string } } = {}
 
 export class Pair {
@@ -35,11 +53,7 @@ export class Pair {
         ...PAIR_ADDRESS_CACHE,
         [tokens[0].address]: {
           ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
-          [tokens[1].address]: getCreate2Address(
-            FACTORY_ADDRESS,
-            keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
-            INIT_CODE_HASH
-          )
+          [tokens[1].address]: grindPairAddress(tokens[0].address, tokens[1].address)
         }
       }
     }
