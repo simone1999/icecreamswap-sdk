@@ -32,7 +32,7 @@ const grindPairAddress = (token0Address: string, token1Address: string): string 
       ])]),
       INIT_CODE_HASH
     )
-    if (resultingAddress.startsWith("0x00")) {
+    if (resultingAddress.startsWith("0x00") && "01234567".includes(resultingAddress[4])) {
       return resultingAddress
     }
     i++;
