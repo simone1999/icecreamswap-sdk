@@ -25,7 +25,7 @@ var ChainId;
   ChainId[ChainId["DOGE"] = 2000] = "DOGE";
   ChainId[ChainId["DOKEN"] = 61916] = "DOKEN";
   ChainId[ChainId["FUSE"] = 122] = "FUSE";
-  ChainId[ChainId["QUAI_TESTNET"] = 9000] = "QUAI_TESTNET";
+  ChainId[ChainId["QUAI"] = 9] = "QUAI";
 })(ChainId || (ChainId = {}));
 
 var TradeType;
@@ -43,7 +43,7 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x001Bc40EA380CaAFaf2Df5B5a1045f9961703ADd';
+var FACTORY_ADDRESS = '0x007bee8A7DFC1c6e9f57485cd7cEB2efc9294512';
 var INIT_CODE_HASH = '0x81ec0781cbaa4a7424c176f40e3e93847bebd5dfa91542b31cb562d2ccbd44cd';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -454,7 +454,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.ROPSTEN] = /*#__PURE__*/new Token(ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.RINKEBY] = /*#__PURE__*/new Token(ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.GÖRLI] = /*#__PURE__*/new Token(ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.KOVAN] = /*#__PURE__*/new Token(ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.BITGERT] = /*#__PURE__*/new Token(ChainId.BITGERT, '0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710', 18, 'WBRISE', 'Wrapped Brise'), _WETH[ChainId.DOGE] = /*#__PURE__*/new Token(ChainId.DOGE, '0xb7ddc6414bf4f5515b52d8bdd69973ae205ff101', 18, 'WDOGE', 'Wrapped Doge'), _WETH[ChainId.DOKEN] = /*#__PURE__*/new Token(ChainId.DOKEN, '0x27b45bCC26e01Ed50B4080A405D1c492FEe89d63', 18, 'WDKN', 'Wrapped DoKEN'), _WETH[ChainId.FUSE] = /*#__PURE__*/new Token(ChainId.FUSE, '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629', 18, 'WFUSE', 'Wrapped Fuse'), _WETH[ChainId.QUAI_TESTNET] = /*#__PURE__*/new Token(ChainId.QUAI_TESTNET, '0x002fB83542035482ED201ab3d2bcc85Ec2A41f0D', 18, 'WQUAI', 'Wrapped Quai'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.ROPSTEN] = /*#__PURE__*/new Token(ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.RINKEBY] = /*#__PURE__*/new Token(ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.GÖRLI] = /*#__PURE__*/new Token(ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.KOVAN] = /*#__PURE__*/new Token(ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.BITGERT] = /*#__PURE__*/new Token(ChainId.BITGERT, '0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710', 18, 'WBRISE', 'Wrapped Brise'), _WETH[ChainId.DOGE] = /*#__PURE__*/new Token(ChainId.DOGE, '0xb7ddc6414bf4f5515b52d8bdd69973ae205ff101', 18, 'WDOGE', 'Wrapped Doge'), _WETH[ChainId.DOKEN] = /*#__PURE__*/new Token(ChainId.DOKEN, '0x27b45bCC26e01Ed50B4080A405D1c492FEe89d63', 18, 'WDKN', 'Wrapped DoKEN'), _WETH[ChainId.FUSE] = /*#__PURE__*/new Token(ChainId.FUSE, '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629', 18, 'WFUSE', 'Wrapped Fuse'), _WETH[ChainId.QUAI] = /*#__PURE__*/new Token(ChainId.QUAI, '0x006C3e2AaAE5DB1bCd11A1a097cE572312EADdBB', 18, 'WQUAI', 'Wrapped Quai'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

@@ -13,7 +13,7 @@ export enum ChainId {
   DOGE = 2000,
   DOKEN = 61916,
   FUSE = 122,
-  QUAI_TESTNET = 9000,
+  QUAI = 9,
 }
 
 export enum TradeType {
@@ -27,7 +27,7 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x001Bc40EA380CaAFaf2Df5B5a1045f9961703ADd'
+export const FACTORY_ADDRESS = '0x007bee8A7DFC1c6e9f57485cd7cEB2efc9294512'
 
 export const INIT_CODE_HASH = '0x81ec0781cbaa4a7424c176f40e3e93847bebd5dfa91542b31cb562d2ccbd44cd'
 
